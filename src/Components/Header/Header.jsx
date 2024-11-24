@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
 import './Header.css';
+import SecondaryHeader from './SecondaryHeader'; // Import the SecondaryHeader component
 
 const Dropdown = ({ children, buttonLabel, icon }) => (
   <div className="header__dropdown">
@@ -14,12 +15,6 @@ const Dropdown = ({ children, buttonLabel, icon }) => (
         {children}
       </div>
     </div>
-  </div>
-);
-
-const SecondaryHeaderSection = ({ children }) => (
-  <div className="secondary-header__section">
-    {children}
   </div>
 );
 
@@ -70,25 +65,7 @@ const Header = () => {
         </div>
       </header>
       
-      <nav className="secondary-header">
-        <div className="secondary-header__container">
-          <div className="secondary-header__left">
-            <SecondaryHeaderSection>
-              <Link to="/">
-                <i className="fa fa-bars" aria-hidden="true"></i> All
-              </Link>
-            </SecondaryHeaderSection>
-            <SecondaryHeaderSection><Link to="/deals">Today's Deals</Link></SecondaryHeaderSection>
-            <SecondaryHeaderSection><Link to="/customer-service">Customer Service</Link></SecondaryHeaderSection>
-            <SecondaryHeaderSection><Link to="/registry">Registry</Link></SecondaryHeaderSection>
-            <SecondaryHeaderSection><Link to="/gift-cards">Gift Cards</Link></SecondaryHeaderSection>
-            <SecondaryHeaderSection><Link to="/sell">Sell</Link></SecondaryHeaderSection>
-          </div>
-          <div className="secondary-header__right">
-            <SecondaryHeaderSection><Link to="/black-friday-deals">Shop Black Friday deals</Link></SecondaryHeaderSection>
-          </div>
-        </div>
-      </nav>
+      <SecondaryHeader />
     </>
   );
 };
