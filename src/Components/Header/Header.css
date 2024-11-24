@@ -4,8 +4,9 @@ body {
   }
   
   .header {
-    background-color: #036243; /* Keep the background color green */
-    padding: 10px 20px;
+    background: linear-gradient(to left, #046B47, #003E33);
+    height: 70px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     color: white;
@@ -14,16 +15,30 @@ body {
   .header__logo {
     margin-right: 20px;
   }
+
+  .header__logo:hover {
+    border: 1px white solid;
+    
+  }
+  
+  .header__logo img {
+    height: 40px;
+    margin-top: 12px;  
+  }
   
   .header__location {
     margin-right: 20px;
     display: flex;
     align-items: center;
   }
+  .header__location:hover {
+    border: 1px white solid;
+  }
   
   .header__location i {
     margin-right: 5px;
     color: white;
+    margin-top: 19px;
   }
   
   .header__location div {
@@ -35,8 +50,23 @@ body {
     flex-grow: 1; /* Make the search bar take more space */
     display: flex;
     align-items: center;
-    border-radius: 8px; /* Add border radius */
+    border-radius: 5px; /* Add border radius */
     overflow: hidden;
+    transition: box-shadow 0.3s ease; /* Add transition for focus effect */
+  }
+  
+  .header__search-bar:hover {
+    box-shadow: 0 0 5px 2px rgb(7, 7, 7); /* Add hover effect */
+  }
+  
+  .header__search-bar:focus,
+  .header__search-bar:focus-within {
+    box-shadow: 0 0 5px 3px #F2A0D1; /* Add focus effect */
+  }
+  
+  .header__search-bar:hover:focus,
+  .header__search-bar:hover:focus-within {
+    box-shadow: 0 0 5px 3px #F2A0D1; /* Ensure hover does not interfere with focus */
   }
   
   .search-select,
@@ -44,13 +74,13 @@ body {
   .search-button {
     border: none;
     padding: 15px;
-    box-sizing: border-box; /* Ensure consistent sizing */
+    outline: none;
   }
   
   .search-select {
     background-color: #E6E6E6;
-    border-top-left-radius: 8px; /* Top left radius */
-    border-bottom-left-radius: 8px; /* Bottom left radius */
+    border-top-left-radius: 5px; /* Top left radius */
+    border-bottom-left-radius: 5px; /* Bottom left radius */
   }
   
   .search-input {
@@ -59,16 +89,16 @@ body {
   
   .search-button {
     background-color: #A9176F; /* Change the background color */
-    border-top-right-radius: 8px; /* Top right radius */
-    border-bottom-right-radius: 8px; /* Bottom right radius */
+    border-top-right-radius: 5px; /* Top right radius */
+    border-bottom-right-radius: 5px; /* Bottom right radius */
     cursor: pointer;
     color: white; /* Ensure the text color is white */
-    height: 46px; /* Increase the height of the elements */
+    height: 46.25px; /* Increase the height of the elements */
   }
   
   .search-button i {
     color: white; /* Ensure the icon color is white */
-    font-size: 20px; /* Increase the font size of the icon */
+    font-size: 24px; /* Adjust font size */
   }
   
   .header__dropdown {
@@ -78,6 +108,12 @@ body {
   .dropdown {
     position: relative;
     display: inline-block;
+  }
+  
+  .dropdown-icon { 
+    width: 40px; 
+    height: 22px;
+    border: 1px black solid;
   }
   
   .dropbtn {
@@ -122,7 +158,6 @@ body {
   .dropdown:hover .dropbtn {
     background-color: #036243;
     border: 1px solid white; /* Add a white border */
-    border-radius: 8px; /* Add border radius */
     box-sizing: border-box; /* Ensure consistent sizing */
   }
   
@@ -131,6 +166,14 @@ body {
     display: flex;
     flex-direction: column;
     text-align: right;
+    cursor: pointer;
+  }
+  
+  .header__orders:hover {
+    background-color: #036243; /* Slightly lighter background on hover */
+    border: 1px solid white; /* Add white border on hover */
+    box-sizing: border-box; /* Ensure consistent sizing */
+    padding: 5px; /* Add padding for better appearance */
   }
   
   .header__cart {
@@ -149,7 +192,51 @@ body {
     font-size: 24px; /* Increase icon size if needed */
   }
   
+  .cart-link:hover {
+    background-color: #036243; /* Slightly lighter background on hover */
+    border: 1px solid white; /* Add white border on hover */
+    box-sizing: border-box; /* Ensure consistent sizing */
+    padding: 5px; /* Add padding for better appearance */
+  }
+  
   .cart-count {
     font-weight: bold;
   }
   
+  .secondary-header {
+    background-color: #085749;
+    padding: 14px;
+  }
+  
+  .secondary-header__container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .secondary-header__left,
+  .secondary-header__right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .secondary-header__left a,
+  .secondary-header__right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .secondary-header__left a:hover,
+  .secondary-header__right a:hover {
+    border: 1px solid white; /* Add white border on hover */
+    padding: 10px; /* Add some padding for better appearance */
+  }
+  
+  .fa-bars {
+    margin-right: 5px;
+  }
+ 
+  .fa-bars::before {
+    font-size: 20px;
+  }
