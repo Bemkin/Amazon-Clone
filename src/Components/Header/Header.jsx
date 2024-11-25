@@ -24,7 +24,7 @@ const Header = () => {
       <header className="header">
         <div className="header__logo">
           <Link to="/">
-            <img src="../public/Amazon-logo-white.svg.png" alt="Amazon" height="30" />
+            <img src="Amazon-logo-white.svg.png" alt="Amazon" height="30" />
           </Link>
         </div>
         <div className="header__location">
