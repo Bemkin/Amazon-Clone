@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
+@import url('@fortawesome/fontawesome-free/css/all.min.css'); /* Import Font Awesome CSS */
+
+.bottom-footer-container {
+  background-color: #131A22;
+  padding: 40px 0; /* Add some padding */
+  width: 100%;
+  text-align: center; /* Center text alignment */
+}
+
+.bottom-footer {
+  display: flex;
+  justify-content: space-around; /* Space sections evenly */
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto; /* Center within the container */
+  gap: 20px; /* Add space between sections */
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
+  text-align: left; /* Align text to the left */
+  width: 200px; /* Adjust width to ensure descriptions go down */
+}
+
+.footer-item a {
+  font-family: 'Roboto' sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-item a:hover {
+  text-decoration: underline;
+}
+
+.footer-title {
+  font-weight: bold;
+  color: #dfdede;
+}
+
+.footer-description {
+  font-size: 14px;
+  color: #a5a5a5;
+  max-width: 140px;
+}
+
+.footer-terms {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 0; /* Center within the container */
+}
+
+.footer-terms a {
+  color: #d3d3d3;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-terms a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  color: #d3d3d3;
+  text-align: center;
+  padding: 0px 0;
+  width: 100%;
+}

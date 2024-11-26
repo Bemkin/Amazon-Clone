@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+import BottomFooter from './BottomFooter';
+
 
 const FooterSection = ({ title, links }) => {
   return (
@@ -61,30 +63,35 @@ function Footer() {
         </div>
         <div className="footer-bottom">
           <div className="footer-bottom-logo">
-            <img src="../public/Amazon-logo-white.svg.png" alt="Amazon" />
+            <img src="67d4872d01fa284595d32c0d9cd6fad1.png" alt="Amazon" />
           </div>
           <div className="footer-bottom-links">
-            <div>
-              <label htmlFor="language-select">Language:</label>
-              <select id="language-select">
-                <option value="en">English</option>
-              </select>
+            <div className="footer-link">
+              <div className="footer-box">
+                <i className="fas fa-globe"></i>
+                <select id="language-select">
+                  <option value="en">English</option>
+                </select>
+              </div>
             </div>
-            <div>
-              <label htmlFor="currency-select">Currency:</label>
-              <select id="currency-select">
-                <option value="usd">USD - U.S. Dollar</option>
-              </select>
+            <div className="footer-link">
+              <div className="footer-box">
+                <i className="fas fa-dollar-sign"></i>
+                <a href="#currency-select">USD - U.S. Dollar</a>
+              </div>
             </div>
-            <div>
-              <label htmlFor="country-select">Country:</label>
-              <select id="country-select">
-                <option value="us">United States</option>
-              </select>
+            <div className="footer-link">
+              <div className="footer-box">
+                <i className="fas fa-flag-usa"></i>
+                <a href="#country-select">United States</a>
+              </div>
             </div>
           </div>
         </div>
       </footer>
+     
+      <BottomFooter/>
+      
     </>
   );
 }
