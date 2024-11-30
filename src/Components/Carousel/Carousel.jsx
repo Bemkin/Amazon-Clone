@@ -17,7 +17,6 @@ const CarouselComponent = () => {
     { image: img4 },
     { image: img5 },
     { image: img6 },
-    // Add more items as needed
   ];
 
   return (

@@ -6,13 +6,13 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 20px auto;
-    max-width: calc(20% - 20px); /* Ensure it matches the category box width */
+    max-width: calc(20% - 20px); 
   }
   
   .single-item-container img {
     width: 100%;
     height: auto;
-    max-height: 300px; /* Adjust as needed */
+    max-height: 300px; 
     object-fit: cover;
     border-radius: 5px;
   }
@@ -48,7 +48,7 @@
   
   .single-item-container button {
     padding: 10px 20px;
-    background-color: rgb(250, 179, 48);
+    background-color: #fab330;
     color: #fff;
     border: none;
     border-radius: 15px;

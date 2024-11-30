@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import './Header.css';
 import SecondaryHeader from './SecondaryHeader'; 
+import { useCart } from '../../Pages/Cart/CartContext'; 
+
 const Dropdown = ({ children, buttonLabel, icon }) => (
   <div className="header__dropdown">
     <div className="dropdown">
@@ -18,6 +20,8 @@ const Dropdown = ({ children, buttonLabel, icon }) => (
 );
 
 const Header = () => {
+  const { cartCount } = useCart();
+
   return (
     <>
       <header className="header">
@@ -27,7 +31,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="header__location">
-          <i className="fas fa-map-marker-alt"></i> 
+          <i className="fas fa-map-marker-alt"></i>
           <div>
             Deliver to <br />
             <strong>Ethiopia</strong>
@@ -39,7 +43,7 @@ const Header = () => {
           </select>
           <input className="search-input" type="text" placeholder="Search Amazon" />
           <button className="search-button">
-            <i className="fa-solid fa-magnifying-glass"></i> 
+            <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <Dropdown buttonLabel="EN" icon="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg">
@@ -59,7 +63,7 @@ const Header = () => {
         <div className="header__cart">
           <Link to="/cart" className="cart-link">
             <i className="fa-solid fa-cart-shopping"></i>
-            <span className="cart-count">0</span> {/* Placeholder for cart count */}
+            <span className="cart-count">{cartCount}</span> 
           </Link>
         </div>
       </header>

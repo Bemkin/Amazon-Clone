@@ -1,136 +1,141 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-  }
-  
-  .header {
+    padding-top: 70px;
+}
+
+.header {
+    position: fixed; 
+    top: 0;
+    width: 98%;
     background: linear-gradient(to left, #046B47, #003E33);
     height: 70px;
     padding: 0 20px;
     display: flex;
     align-items: center;
     color: white;
-  }
-  
-  .header__logo {
-    margin-right: 20px;
-  }
+    z-index: 1000; 
+}
 
-  .header__logo:hover {
+.header__logo {
+    margin-right: 20px;
+}
+
+.header__logo:hover {
     border: 1px white solid;
-    
-  }
-  
-  .header__logo img {
+}
+
+.header__logo img {
     height: 40px;
-    margin-top: 12px;  
-  }
-  
-  .header__location {
+    margin-top: 12px;
+}
+
+.header__location {
     margin-right: 20px;
     display: flex;
     align-items: center;
-  }
-  .header__location:hover {
+}
+
+.header__location:hover {
     border: 1px white solid;
-  }
-  
-  .header__location i {
+}
+
+.header__location i {
     margin-right: 5px;
     color: white;
     margin-top: 19px;
-  }
-  
-  .header__location div {
+}
+
+.header__location div {
     display: flex;
     flex-direction: column;
-  }
-  
-  .header__search-bar {
-    flex-grow: 1; /* Make the search bar take more space */
+}
+
+.header__search-bar {
+    flex-grow: 1; 
     display: flex;
     align-items: center;
-    border-radius: 5px; /* Add border radius */
+    border-radius: 5px; 
     overflow: hidden;
-    transition: box-shadow 0.3s ease; /* Add transition for focus effect */
-  }
-  
-  .header__search-bar:hover {
-    box-shadow: 0 0 5px 2px rgb(7, 7, 7); /* Add hover effect */
-  }
-  
-  .header__search-bar:focus,
-  .header__search-bar:focus-within {
-    box-shadow: 0 0 5px 3px #F2A0D1; /* Add focus effect */
-  }
-  
-  .header__search-bar:hover:focus,
-  .header__search-bar:hover:focus-within {
-    box-shadow: 0 0 5px 3px #F2A0D1; /* Ensure hover does not interfere with focus */
-  }
-  
-  .search-select,
-  .search-input,
-  .search-button {
+    transition: box-shadow 0.3s ease; 
+}
+
+.header__search-bar:hover {
+    box-shadow: 0 0 5px 2px rgb(7, 7, 7); 
+}
+
+.header__search-bar:focus,
+.header__search-bar:focus-within {
+    box-shadow: 0 0 5px 3px #F2A0D1; 
+}
+
+.header__search-bar:hover:focus,
+.header__search-bar:hover:focus-within {
+    box-shadow: 0 0 5px 3px #F2A0D1; 
+}
+
+.search-select,
+.search-input,
+.search-button {
     border: none;
     padding: 15px;
     outline: none;
-  }
-  
-  .search-select {
+}
+
+.search-select {
     background-color: #E6E6E6;
-    border-top-left-radius: 5px; /* Top left radius */
-    border-bottom-left-radius: 5px; /* Bottom left radius */
-  }
-  
-  .search-input {
-    flex-grow: 1; /* Make the input field take up remaining space */
-  }
-  
-  .search-button {
-    background-color: #A9176F; /* Change the background color */
-    border-top-right-radius: 5px; /* Top right radius */
-    border-bottom-right-radius: 5px; /* Bottom right radius */
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+}
+
+.search-input {
+    flex-grow: 1;
+}
+
+.search-button {
+    background-color: #A9176F; 
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px; 
     cursor: pointer;
-    color: white; /* Ensure the text color is white */
-    height: 46.25px; /* Increase the height of the elements */
-  }
-  
-  .search-button i {
-    color: white; /* Ensure the icon color is white */
-    font-size: 24px; /* Adjust font size */
-  }
-  
-  .header__dropdown {
+    color: white; 
+    height: 46.25px;
+}
+
+.search-button i {
+    color: white;
+    font-size: 24px; 
+}
+
+.header__dropdown {
     margin-left: 20px;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-icon { 
-    width: 40px; 
+}
+
+.dropdown-icon {
+    width: 40px;
     height: 22px;
     border: 1px black solid;
-  }
-  
-  .dropbtn {
+}
+
+.dropbtn {
     background-color: inherit;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    box-sizing: border-box; /* Ensure consistent sizing */
-  }
-  
-  .dropbtn i {
+    box-sizing: border-box; 
+}
+
+.dropbtn i {
     margin-left: 5px;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
@@ -138,69 +143,68 @@ body {
     min-width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdown-content a:hover {
+}
+
+.dropdown-content a:hover {
     background-color: #ddd;
-  }
-  
-  .dropdown:hover .dropdown-content {
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
+}
+
+.dropdown:hover .dropbtn {
     background-color: #036243;
-    border: 1px solid white; /* Add a white border */
-    box-sizing: border-box; /* Ensure consistent sizing */
-  }
-  
-  .header__orders {
+    border: 1px solid white; 
+    box-sizing: border-box;
+}
+
+.header__orders {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     text-align: right;
     cursor: pointer;
-  }
-  
-  .header__orders:hover {
-    background-color: #036243; /* Slightly lighter background on hover */
-    border: 1px solid white; /* Add white border on hover */
-    box-sizing: border-box; /* Ensure consistent sizing */
-    padding: 5px; /* Add padding for better appearance */
-  }
-  
-  .header__cart {
+}
+
+.header__orders:hover {
+    background-color: #036243;
+    border: 1px solid white;
+    box-sizing: border-box;
+    padding: 5px; 
+}
+
+.header__cart {
     margin-left: 20px;
-  }
-  
-  .cart-link {
+    margin-right: 5px;
+}
+
+.cart-link {
     color: white;
     text-decoration: none;
     display: flex;
     align-items: center;
-  }
-  
-  .cart-link i {
+}
+
+.cart-link i {
     margin-right: 5px;
-    font-size: 24px; /* Increase icon size if needed */
-  }
-  
-  .cart-link:hover {
-    background-color: #036243; /* Slightly lighter background on hover */
-    border: 1px solid white; /* Add white border on hover */
-    box-sizing: border-box; /* Ensure consistent sizing */
-    padding: 5px; /* Add padding for better appearance */
-  }
-  
-  .cart-count {
+    font-size: 24px; 
+}
+
+.cart-link:hover {
+    background-color: #036243; 
+    border: 1px solid white; 
+    box-sizing: border-box; 
+    padding: 5px;
+}
+
+.cart-count {
     font-weight: bold;
-  }
-  
-  
+}

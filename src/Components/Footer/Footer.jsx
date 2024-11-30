@@ -2,7 +2,6 @@ import React from 'react';
 import './Footer.css';
 import BottomFooter from './BottomFooter';
 
-
 const FooterSection = ({ title, links }) => {
   return (
     <div className="footer-section">
@@ -51,9 +50,13 @@ const footerLinks = {
 };
 
 function Footer() {
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
-      <button className="Back-to-top-button">Back to top</button>
+      <button className="Back-to-top-button" onClick={handleScrollToTop}>Back to top</button>
       <footer className="footer">
         <div className="footer-top">
           <FooterSection title="Get to Know Us" links={footerLinks.getToKnowUs} />
@@ -89,9 +92,7 @@ function Footer() {
           </div>
         </div>
       </footer>
-     
-      <BottomFooter/>
-      
+      <BottomFooter />
     </>
   );
 }

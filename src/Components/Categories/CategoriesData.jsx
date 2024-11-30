@@ -17,7 +17,7 @@ const CategoriesData = ({ children }) => {
         const images = {};
         for (const category of categories) {
           const productsResponse = await axios.get(`https://fakestoreapi.com/products/category/${category}`);
-          images[category] = productsResponse.data[0].image; // Use the first product image from each category
+          images[category] = productsResponse.data[0].image;
         }
         setCategoryImages(images);
         setLoading(false);
