@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import './Header.css';
-import SecondaryHeader from './SecondaryHeader'; // Import the SecondaryHeader component
-
+import SecondaryHeader from './SecondaryHeader'; 
 const Dropdown = ({ children, buttonLabel, icon }) => (
   <div className="header__dropdown">
     <div className="dropdown">
@@ -28,7 +27,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="header__location">
-          <i className="fas fa-map-marker-alt"></i> {/* Location pin icon */}
+          <i className="fas fa-map-marker-alt"></i> 
           <div>
             Deliver to <br />
             <strong>Ethiopia</strong>
@@ -40,7 +39,7 @@ const Header = () => {
           </select>
           <input className="search-input" type="text" placeholder="Search Amazon" />
           <button className="search-button">
-            <i className="fa-solid fa-magnifying-glass"></i> {/* Search icon */}
+            <i className="fa-solid fa-magnifying-glass"></i> 
           </button>
         </div>
         <Dropdown buttonLabel="EN" icon="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg">
@@ -49,7 +48,7 @@ const Header = () => {
           <Link to="/">FR</Link>
         </Dropdown>
         <Dropdown buttonLabel={<><span>Hello, sign in</span><br /><strong>Account & Lists</strong></>}>
-          <Link to="/">Account</Link>
+          <Link to="/auth">Account</Link>
           <Link to="/">Orders</Link>
           <Link to="/">Wishlist</Link>
         </Dropdown>
