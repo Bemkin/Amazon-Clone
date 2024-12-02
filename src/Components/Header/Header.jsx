@@ -26,7 +26,7 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header__logo">
-          <Link to="/">
+          <Link to="/Amazon-Clone/">
             <img src="Amazon-logo-white.svg.png" alt="Amazon" height="30" />
           </Link>
         </div>

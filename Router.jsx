@@ -19,7 +19,7 @@ function Routing() {
     <CartProvider>
    <Layout>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/Amazon-Clone/" element={<Landing />} />
         <Route path="/auth" element={<SignIn />} />
         <Route path="/payments" element={<Payment />} />
         <Route path="/orders" element={<Orders />} />
