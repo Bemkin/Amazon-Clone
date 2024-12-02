@@ -54,6 +54,9 @@
     .category-box {
       flex: 1 1 calc(25% - 20px);
     }
+    .categories-container {
+        margin-top: 0px;
+    }
   }
   
   @media (max-width: 992px) {
