@@ -135,6 +135,15 @@ body {
     margin-left: 5px;
 }
 
+.sign-out-button{
+    padding: 10px;
+    margin-left: 40px;
+    background-color: #036243;
+    color: white;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;

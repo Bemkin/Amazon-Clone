@@ -1,0 +1,72 @@
+/* SignIn.css */
+.signin-container {
+    width: 300px;
+    margin: 350px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .signin-logo { width: 100px; /* Adjust the width as needed */ margin-bottom: 20px; }
+  
+  .signin-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .signin-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signin-container label {
+    margin: 10px 0 5px;
+    text-align: left;
+  }
+  
+  .signin-container input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .signin-container button[type="submit"] {
+    padding: 10px;
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .signin-container button[type="submit"]:hover {
+    background-color: #e2ad27;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .signin-container p {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #555;
+  }
+  
+  .create-account-button {
+    padding: 10px;
+    background-color: #a9c5e9;
+    border: 1px solid #8ab4e6;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .create-account-button:hover {
+    background-color: #8ab4e6;
+  }
+  
+  
