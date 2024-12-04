@@ -1,8 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv';
 
-// https://vite.dev/config/
+// Load .env file
+dotenv.config();
+
 export default defineConfig({
-  base : '/Amazon-Clone/',
   plugins: [react()],
-})
+  define: {
+    'process.env': process.env
+  }
+});
