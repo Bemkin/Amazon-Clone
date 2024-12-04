@@ -50,8 +50,8 @@ const Header = ({ user, setUser }) => {  {/* Ensure setUser is a prop */}
     <>
       <header className="header">
         <div className="header__logo">
-          <Link to="/">
-            <img src="Amazon-logo-white.svg.png" alt="Amazon" height="30" />
+          <Link to="/Amazon-Clone/">
+            <img src="/Amazon-logo-white.svg.png" alt="Amazon" height="30" />
           </Link>
         </div>
         <div className="header__location">
