@@ -28,6 +28,7 @@
 }
 
 .footer-top {
+  gap: 30px;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 20px;
@@ -118,11 +119,7 @@
 
 /* Media Queries */
 @media (max-width: 1200px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-  }
-
+  
   .footer-section {
     margin: 20px 0;
   }
@@ -138,10 +135,7 @@
 }
 
 @media (max-width: 992px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-  }
+ 
 
   .footer-section h4 {
     font-size: 16px;
@@ -181,11 +175,7 @@
 }
 
 @media (max-width: 576px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-  }
-
+ 
   .footer-section h4 {
     font-size: 12px;
   }

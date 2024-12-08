@@ -83,6 +83,7 @@ body {
 }
 
 .search-select {
+    height: 45px;
     background-color: #E6E6E6;
     border-top-left-radius: 5px; 
     border-bottom-left-radius: 5px; 
@@ -220,12 +221,13 @@ body {
 
 /* Media Queries */
 @media (max-width: 1200px) {
-  .header__logo img {
+    .header__logo img {
     height: 35px;
   }
 
+ 
   .search-button {
-    height: 40px;
+    height: 47px;
   }
 
   .header__orders {

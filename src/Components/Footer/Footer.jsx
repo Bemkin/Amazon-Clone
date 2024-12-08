@@ -66,7 +66,7 @@ function Footer() {
         </div>
         <div className="footer-bottom">
           <div className="footer-bottom-logo">
-            <img src="67d4872d01fa284595d32c0d9cd6fad1.png" alt="Amazon" />
+            <img src="../67d4872d01fa284595d32c0d9cd6fad1.png" alt="Amazon" />
           </div>
           <div className="footer-bottom-links">
             <div className="footer-link">
