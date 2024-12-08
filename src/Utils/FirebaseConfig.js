@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, setPersistence, browserLocalPersistence } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -18,5 +18,22 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+// Set auth state persistence
+setPersistence(auth, browserLocalPersistence)
+  .then(() => {
+    // Listen for auth state changes
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log('User is signed in:', user);
+        // Handle the user object as needed
+      } else {
+        console.log('No user is signed in.');
+      }
+    });
+  })
+  .catch((error) => {
+    console.error('Error setting auth persistence:', error);
+  });
 
 export { db, auth, analytics };

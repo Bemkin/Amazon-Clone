@@ -4,21 +4,21 @@ import { Link } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = () => {
-  const { cart, addToCart, decreaseQuantity, removeFromCart, clearCart } = useCart();
+  const { cartItems, addToCart, decreaseQuantity, removeFromCart, clearCart } = useCart();
 
   const calculateSubtotal = () => {
-    return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
 
   const calculateTotalQuantity = () => {
-    return cart.reduce((total, item) => total + item.quantity, 0);
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
 
-  if (cart.length === 0) {
+  if (cartItems.length === 0) {
     return (
       <div className="cart-container">
         <h1>Your Cart</h1>
-        <p>Your cart is empty. Go back to <Link to="/">shop more</Link>.</p>
+        <p>Your cart is empty. Go back to <Link to="/Amazon-Clone">shop more</Link>.</p>
       </div>
     );
   }
@@ -27,15 +27,15 @@ const Cart = () => {
     <div className="cart-container">
       <h1>Your Cart</h1>
       <div className="cart-summary">
-        <p>Subtotal ({cart.length} distinct items): <strong>${calculateSubtotal()}</strong></p>
+        <p>Subtotal ({cartItems.length} distinct items): <strong>${calculateSubtotal()}</strong></p>
         <p>Total Quantity: <strong>{calculateTotalQuantity()}</strong></p>
         <label>
           <input type="checkbox" /> This order contains a gift
         </label>
-        <button className="checkout-button">Continue to Checkout</button>
+        <Link to="/payment" className="checkout-button">Continue to Checkout</Link>
       </div>
       <ul>
-        {cart.map((item) => (
+        {cartItems.map((item) => (
           <li key={item.id} className="cart-item">
             <img src={item.image} alt={item.title} />
             <div className="cart-item-details">
