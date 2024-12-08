@@ -3,7 +3,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useNavigate } from 'react-router-dom';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
-import './CheckoutForm.css';
+import './CheckOutForm.css';
 import { useCart } from '../../Pages/Cart/CartContext'; 
 
 const CheckoutForm = ({ clientSecret, address }) => {
