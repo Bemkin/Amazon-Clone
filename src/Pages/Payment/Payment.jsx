@@ -4,7 +4,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import { useCart } from '../../Pages/Cart/CartContext';
 import CheckoutForm from './CheckOutForm';
 import './Payment.css';
-import config from '../../API/Config';
+import config from '../../API/config';
 
 // Load Stripe
 const stripePromise = loadStripe('pk_test_51QSfl2EpYK2646EX0SyIDs9qZdAE8ERYYqQGolOZQQjkdERzfWUCdmYsnPh7Ay7SMXPnWM9eejgmUBsjuvEq5QSK00qRiOS2en');
