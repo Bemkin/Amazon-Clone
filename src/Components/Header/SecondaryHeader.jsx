@@ -14,7 +14,7 @@ const SecondaryHeader = () => (
     <div className="secondary-header__container">
       <div className="secondary-header__left">
         <SecondaryHeaderSection>
-          <Link to="/Amazon-Clone/">
+          <Link to="/">
             <i className="fa fa-bars" aria-hidden="true"></i> All
           </Link>
         </SecondaryHeaderSection>

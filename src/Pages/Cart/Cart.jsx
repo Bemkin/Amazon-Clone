@@ -18,7 +18,7 @@ const Cart = () => {
     return (
       <div className="cart-container">
         <h1>Your Cart</h1>
-        <p>Your cart is empty. Go back to <Link to="/Amazon-Clone">shop more</Link>.</p>
+        <p>Your cart is empty. Go back to <Link to="/">shop more</Link>.</p>
       </div>
     );
   }

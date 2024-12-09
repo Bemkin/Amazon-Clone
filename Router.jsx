@@ -35,7 +35,7 @@ function Routing() {
         <Header user={user} setUser={setUser} /> 
         <Layout>
           <Routes>
-            <Route path="/Amazon-Clone/" element={<Landing />} />
+            <Route path="/" element={<Landing />} />
             <Route path="/auth" element={<SignIn setUser={setUser} />} />  
             <Route path='/signup' element={<SignUp setUser={setUser} />} /> 
             <Route path="/payment" element={
